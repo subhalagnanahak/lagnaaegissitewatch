@@ -1,0 +1,6 @@
+.venv-train/
+ppe_dataset/
+runs/
+__pycache__/
+*.pt
+*.log
