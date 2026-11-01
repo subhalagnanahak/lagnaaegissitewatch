@@ -1,0 +1,25 @@
+fastapi
+uvicorn[standard]
+# opencv-contrib-python is a superset of opencv-python (same core
+# module, plus the "contrib" modules) - it's what face_id.py needs
+# for cv2.FaceDetectorYN / cv2.FaceRecognizerSF (see models/README.md
+# for the one-time model download). Installing both opencv-python AND
+# opencv-contrib-python in the same environment conflicts - if you
+# already have plain opencv-python installed, uninstall it first
+# (pip uninstall opencv-python) before installing this.
+opencv-contrib-python
+ultralytics
+twilio
+python-multipart
+# HTTP digest-auth client - used by isapi_snapshot.py as a fallback
+# camera source (polling a DVR's JPEG snapshot endpoint) when a DVR's
+# RTSP/H.265 stream can't be used directly. Almost certainly already
+# present as a dependency of twilio/ultralytics, but listed explicitly
+# since it's now imported directly too.
+requests
+# Optional - only needed for the offline GSM SMS channel (gsm_sms.py)
+# and/or the hardware fire/smoke sensor fusion (fire_sensor.py). Both
+# features disable themselves gracefully (GSM_SMS_ENABLED=false /
+# FIRE_SENSOR_ENABLED=false, the defaults) if this isn't installed -
+# nothing else in the project needs it.
+pyserial

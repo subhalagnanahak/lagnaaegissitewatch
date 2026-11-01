@@ -1,0 +1,30 @@
+[
+  {
+    "id": "0",
+    "source": 0,
+    "location": "a",
+    "zone": "x",
+    "enabled": false,
+    "watched_items": [],
+    "watched_hazards": [
+      "fire",
+      "smoke"
+    ],
+    "show_heatmap": true
+  },
+  {
+    "id": "2",
+    "source": "http://admin:Robo%407788@192.168.29.161:15357/ISAPI/Streaming/channels/201/picture",
+    "location": "d",
+    "zone": "g",
+    "enabled": false,
+    "watched_items": [
+      "gloves",
+      "helmet",
+      "vest",
+      "goggles"
+    ],
+    "watched_hazards": [],
+    "show_heatmap": false
+  }
+]
