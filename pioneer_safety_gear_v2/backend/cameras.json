@@ -6,10 +6,7 @@
     "zone": "x",
     "enabled": false,
     "watched_items": [],
-    "watched_hazards": [
-      "fire",
-      "smoke"
-    ],
+    "watched_hazards": [],
     "show_heatmap": true
   },
   {

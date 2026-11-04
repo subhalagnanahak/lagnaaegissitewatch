@@ -37,6 +37,8 @@
 # class either.
 # ============================================================
 
+import torch
+
 from config import (
     PPE_COMPLIANT_CLASSES,
     PPE_EXPLICIT_VIOLATION_CLASSES,
@@ -47,7 +49,8 @@ from config import (
     INCIDENT_LABELS,
 )
 
-
+# Use the GPU when available, otherwise fall back to CPU
+INFERENCE_DEVICE = 0 if torch.cuda.is_available() else "cpu"
 # ============================================================
 # CLASS NAME LOOKUP
 # ============================================================
@@ -240,7 +243,7 @@ def run_model(model, frame, confidence, inference_size):
         source=frame,
         conf=confidence,
         imgsz=inference_size,
-        device="cpu",
+       device=INFERENCE_DEVICE,
         verbose=False,
     )
 
